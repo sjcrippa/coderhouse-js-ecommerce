@@ -71,11 +71,13 @@
             <form>
                 <div class="mb-3">
                     <label for="name" class="form-label">Nombre y Apellido</label>
-                    <input type="text" placeholder="Escriba su nombre y apellido" class="form-control" id="name" aria-describedby="emailHelp" required>
+                    <input type="text" placeholder="Escriba su nombre y apellido" class="form-control" id="name"
+                        aria-describedby="emailHelp" required>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Direccion de Email</label>
-                    <input type="email" placeholder="Escriba su correo electronico" class="form-control" id="email" aria-describedby="emailHelp" required>
+                    <input type="email" placeholder="Escriba su correo electronico" class="form-control" id="email"
+                        aria-describedby="emailHelp" required>
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
@@ -88,10 +90,10 @@
         </div>
     </section>
 
-    <section id="produSection" class="container-fluid">
+    <section id="produSection" class="mt-5 container-fluid">
         <div class="mt-5">
             <h2 class="text-center">Eleji el aroma que mas te guste</h2>
-            <h4 class="text-center">Dentro de nuestra gama de productos podes encontrar:</h4>
+            <h4 class="mt-5 text-center">Dentro de nuestra gama de productos podes encontrar:</h4>
         </div>
 
         <div class="mt-5 row row-cols-1 row-cols-md-2 g-4 text-center">
@@ -101,17 +103,18 @@
                     <div class="card-body">
                         <h5 class="card-title">Paco Rabanne</h5>
                         <p class="card-text"> Black XS - $1.500,00</p>
-                        <a href="#" class="btn btn-primary">Agregar</a>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar</a>
                     </div>
                 </div>
             </div>
             <div class="col d-flex justify-content-center">
                 <div class="card">
-                    <img src="src/imgs/cards-perfumes/one-millon-lucky.PNG" class="cartaImg card-img-top img-fluid" alt="...">
+                    <img src="src/imgs/cards-perfumes/one-millon-lucky.PNG" class="cartaImg card-img-top img-fluid"
+                        alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Paco Rabanne</h5>
                         <p class="card-text">One Millon Lucky - $2.000,00</p>
-                        <a href="#" class="btn btn-primary">Agregar</a>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar</a>
                     </div>
                 </div>
             </div>
@@ -121,7 +124,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Paco Rabanne</h5>
                         <p class="card-text">One Millon - $1.800,00</p>
-                        <a href="#" class="btn btn-primary">Agregar</a>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar</a>
                     </div>
                 </div>
             </div>
@@ -131,12 +134,30 @@
                     <div class="card-body">
                         <h5 class="card-title">Paco Rabanne</h5>
                         <p class="card-text">Invictus - $2.500,00</p>
-                        <a href="#" class="btn btn-primary">Agregar</a>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito de compras.</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ¡Has agregado un producto al carrito!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="b-example-divider"></div>
 
@@ -148,7 +169,7 @@
                         <use xlink:href="#bootstrap" />
                     </svg>
                 </a>
-                <span class="mb-3 mb-md-0 text-muted">&copy; 2023 Developed by Crippa Santiago Julian </span>
+                <span class="mb-3 mb-md-0 text-muted">&copy; 2023 Developed by: S.J. Crippa </span>
             </div>
         </footer>
     </div>
