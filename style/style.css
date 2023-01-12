@@ -35,6 +35,11 @@ header {
     text-decoration: none;
 }
 
+.cart {
+    color: red;
+    text-decoration: none
+}
+
 h2 {
     font-size: 3rem;
     font-weight: bold;

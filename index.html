@@ -15,6 +15,9 @@
 </head>
 
 <body>
+
+    <!-- SECTOR DE NAVEGACION -->
+
     <header>
         <nav class="navbar navbar-expand-lg ">
 
@@ -39,12 +42,14 @@
                     </ul>
                 </div>
 
-                <div class="">
-                    <!-- aca va el carrito de compras -->
+                <div class="container mx-auto">
+                    <button class="btn btn-secundary"><a class="cart" href="#carrito">Mi Carrito</a></button>
                 </div>
             </div>
         </nav>
     </header>
+
+    <!-- SECTOR PRINCIPAL -->
 
     <main id="mainSection">
         <div class="container">
@@ -65,30 +70,42 @@
         </div>
     </section>
 
+    <!-- SECTOR FORMULARIO -->
+
     <section id="contactSection" class="mt-5 container">
         <div class="container-fluid">
             <h2 class="comWithUs text-center">Comunicate con nosotros</h2>
-            <form>
+            <form id="formulario">
                 <div class="mb-3">
+                    <!-- input nombres -->
                     <label for="name" class="form-label">Nombre y Apellido</label>
                     <input type="text" placeholder="Escriba su nombre y apellido" class="form-control" id="name"
                         aria-describedby="emailHelp" required>
                 </div>
                 <div class="mb-3">
+                    <!-- input correos -->
                     <label for="email" class="form-label">Direccion de Email</label>
                     <input type="email" placeholder="Escriba su correo electronico" class="form-control" id="email"
                         aria-describedby="emailHelp" required>
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Consulta</label>
-                    <input type="text" placeholder="Desarrolle su consulta" class="form-control" required>
+                    <!-- input textos -->
+                    <label for="text" class="form-label">Consulta</label>
+                    <input type="text" placeholder="Desarrolle su consulta" class="form-control" id="text" required>
                 </div>
+                <!-- boton enviar -->
                 <button type="submit" class="btn btn-primary">Enviar</button>
+                <!-- boton limpiar -->
                 <input class="btn btn-primary" type="reset" value="Limpiar">
             </form>
         </div>
+        <div class="container">
+            <div class="info"></div>
+        </div>
     </section>
+
+    <!-- SECTOR DE PRODUCTOS -->
 
     <section id="produSection" class="mt-5 container-fluid">
         <div class="mt-5">
@@ -103,7 +120,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Paco Rabanne</h5>
                         <p class="card-text"> Black XS - $1.500,00</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar</a>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            data-id="1">Agregar</a>
                     </div>
                 </div>
             </div>
@@ -114,7 +133,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Paco Rabanne</h5>
                         <p class="card-text">One Millon Lucky - $2.000,00</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar</a>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            data-id="2">Agregar</a>
                     </div>
                 </div>
             </div>
@@ -124,7 +145,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Paco Rabanne</h5>
                         <p class="card-text">One Millon - $1.800,00</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar</a>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            data-id="3">Agregar</a>
                     </div>
                 </div>
             </div>
@@ -134,15 +157,23 @@
                     <div class="card-body">
                         <h5 class="card-title">Paco Rabanne</h5>
                         <p class="card-text">Invictus - $2.500,00</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar</a>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            data-id="4">Agregar</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <!-- CARRITO -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div id="carrito"></div>
+
+
+    <!-- MODAL -->
+
+    <div class="modal fade just" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -153,11 +184,13 @@
                     ¡Has agregado un producto al carrito!
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Entendido</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- FOOTER -->
 
     <div class="b-example-divider"></div>
 
