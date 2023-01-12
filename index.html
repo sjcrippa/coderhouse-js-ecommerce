@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Proyecto Final - JS CoderHouse</title>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -17,29 +17,125 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg ">
+
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="titleNav navbar-brand" href="index.html">E-Commerce</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+
+                <div class="me-2 linksNav collapse navbar-collapse m-auto" id="navbarNav">
+                    <ul class="me-5 navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                            <a class="links nav-link" aria-current="page" href="#mainSection">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="links nav-link" href="#contactSection">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="links nav-link" href="#produSection">Products</a>
                         </li>
                     </ul>
+                </div>
+
+                <div class="">
+                    <!-- aca va el carrito de compras -->
                 </div>
             </div>
         </nav>
     </header>
+
+    <main id="mainSection">
+        <div class="container">
+            <h2 class="mt-2 text-center">Proyecto final CoderHouse</h2>
+            <h3 class="mt-4 text-center">Vona</h3>
+            <h4 class="text-center">Aromas Importados</h4>
+            <div class="mt-4 text-center">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi eius corrupti vero labore
+                    hic, minima totam exercitationem sit ad, non dolor incidunt voluptatum consequuntur voluptatem,
+                    atque vel! Nihil, sed?</p>
+            </div>
+        </div>
+    </main>
+
+    <section>
+        <div class="container">
+            <img class="mx-auto img-fluid" src="src/imgs/main-portada-versace.png" alt="">
+        </div>
+    </section>
+
+    <section id="contactSection" class="mt-5 container">
+        <div class="container-fluid">
+            <h2 class="comWithUs text-center">Comunicate con nosotros</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Direccion de Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Consulta</label>
+                    <input type="text" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="produSection" class="container">
+        <div class="mt-5">
+            <h2 class="text-center">Eleji el aroma que mas te guste</h2>
+            <h3 class="text-center">Dentro de nuestra gama de productos podes encontrar:</h3>
+        </div>
+
+        <div class="row container-fluid gap-3 text-center mt-5">
+            <div class="card col" style="width: 18rem;">
+                <img src="src/imgs/cards-perfumes/invictus.PNG" class="cartaImg card-img-top img-fluid" alt="invictus">
+                <div class="card-body">
+                    <h5 class="card-title">Paco Rabanne</h5>
+                    <p class="card-text">Invictus</p>
+                    <a href="#" class="btn btn-primary">Agregar</a>
+                </div>
+            </div>
+
+            <div class="card col" style="width: 18rem;">
+                <img src="src/imgs/cards-perfumes/one-millon.PNG" class="cartaImg card-img-top img-fluid"
+                    alt="one millon">
+                <div class="card-body">
+                    <h5 class="card-title">Paco Rabanne</h5>
+                    <p class="card-text">One Millon</p>
+                    <a href="#" class="btn btn-primary">Agregar</a>
+                </div>
+            </div>
+
+            <div class="card col" style="width: 18rem;">
+                <img src="src/imgs/cards-perfumes/one-millon-lucky.PNG" class="cartaImg card-img-top img-fluid"
+                    alt="one millon lucky">
+                <div class="card-body">
+                    <h5 class="card-title">Paco Rabanne</h5>
+                    <p class="card-text">One Millon Lucky</p>
+                    <a href="#" class="btn btn-primary">Agregar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="b-example-divider"></div>
+
+    <div class="container mt-5">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap" />
+                    </svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-muted">&copy; 2023 Developed by Crippa Santiago Julian </span>
+            </div>
+        </footer>
+    </div>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
