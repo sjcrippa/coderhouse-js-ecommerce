@@ -11,8 +11,7 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- Styles -->
     <link rel="stylesheet" href="style/style.css">
-    <!-- Scripts -->
-    <script defer src="script/index.js"></script>
+
 </head>
 
 <body>
@@ -53,9 +52,9 @@
             <h3 class="mt-4 text-center">Vona</h3>
             <h4 class="text-center">Aromas Importados</h4>
             <div class="mt-4 text-center">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quasi eius corrupti vero labore
-                    hic, minima totam exercitationem sit ad, non dolor incidunt voluptatum consequuntur voluptatem,
-                    atque vel! Nihil, sed?</p>
+                <p>Vona es un emprendimiento que se centra en la experiencia del usuario, tanto para la venta de los
+                    aromas mas finos del mercado como para la experiencia de un servicio satisfactorio, ofrenciendo
+                    atencion y embalaje personalizados y, sobre todo, cumplimiento y garantia para con el cliente.</p>
             </div>
         </div>
     </main>
@@ -71,52 +70,69 @@
             <h2 class="comWithUs text-center">Comunicate con nosotros</h2>
             <form>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Direccion de Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="name" class="form-label">Nombre y Apellido</label>
+                    <input type="text" placeholder="Escriba su nombre y apellido" class="form-control" id="name" aria-describedby="emailHelp" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Direccion de Email</label>
+                    <input type="email" placeholder="Escriba su correo electronico" class="form-control" id="email" aria-describedby="emailHelp" required>
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Consulta</label>
-                    <input type="text" class="form-control">
+                    <input type="text" placeholder="Desarrolle su consulta" class="form-control" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
+                <input class="btn btn-primary" type="reset" value="Limpiar">
             </form>
         </div>
     </section>
 
-    <section id="produSection" class="container">
+    <section id="produSection" class="container-fluid">
         <div class="mt-5">
             <h2 class="text-center">Eleji el aroma que mas te guste</h2>
-            <h3 class="text-center">Dentro de nuestra gama de productos podes encontrar:</h3>
+            <h4 class="text-center">Dentro de nuestra gama de productos podes encontrar:</h4>
         </div>
 
-        <div class="row container-fluid gap-3 text-center mt-5">
-            <div class="card col" style="width: 18rem;">
-                <img src="src/imgs/cards-perfumes/invictus.PNG" class="cartaImg card-img-top img-fluid" alt="invictus">
-                <div class="card-body">
-                    <h5 class="card-title">Paco Rabanne</h5>
-                    <p class="card-text">Invictus</p>
-                    <a href="#" class="btn btn-primary">Agregar</a>
+        <div class="mt-5 row row-cols-1 row-cols-md-2 g-4 text-center">
+            <div class="col d-flex justify-content-center">
+                <div class="card">
+                    <img src="src/imgs/cards-perfumes/black-xs.PNG" class="cartaImg card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Paco Rabanne</h5>
+                        <p class="card-text"> Black XS - $1.500,00</p>
+                        <a href="#" class="btn btn-primary">Agregar</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="card col" style="width: 18rem;">
-                <img src="src/imgs/cards-perfumes/one-millon.PNG" class="cartaImg card-img-top img-fluid"
-                    alt="one millon">
-                <div class="card-body">
-                    <h5 class="card-title">Paco Rabanne</h5>
-                    <p class="card-text">One Millon</p>
-                    <a href="#" class="btn btn-primary">Agregar</a>
+            <div class="col d-flex justify-content-center">
+                <div class="card">
+                    <img src="src/imgs/cards-perfumes/one-millon-lucky.PNG" class="cartaImg card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Paco Rabanne</h5>
+                        <p class="card-text">One Millon Lucky - $2.000,00</p>
+                        <a href="#" class="btn btn-primary">Agregar</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="card col" style="width: 18rem;">
-                <img src="src/imgs/cards-perfumes/one-millon-lucky.PNG" class="cartaImg card-img-top img-fluid"
-                    alt="one millon lucky">
-                <div class="card-body">
-                    <h5 class="card-title">Paco Rabanne</h5>
-                    <p class="card-text">One Millon Lucky</p>
-                    <a href="#" class="btn btn-primary">Agregar</a>
+            <div class="col d-flex justify-content-center">
+                <div class="card">
+                    <img src="src/imgs/cards-perfumes/one-millon.PNG" class="cartaImg card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Paco Rabanne</h5>
+                        <p class="card-text">One Millon - $1.800,00</p>
+                        <a href="#" class="btn btn-primary">Agregar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="card">
+                    <img src="src/imgs/cards-perfumes/invictus.PNG" class="cartaImg card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Paco Rabanne</h5>
+                        <p class="card-text">Invictus - $2.500,00</p>
+                        <a href="#" class="btn btn-primary">Agregar</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -141,6 +157,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+
+    <!-- Script -->
+    <script src="script/index.js"></script>
 
 </body>
 
