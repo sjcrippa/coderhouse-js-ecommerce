@@ -19,31 +19,29 @@
     <!-- SECTOR DE NAVEGACION -->
 
     <header>
-        <nav class="navbar navbar-expand-lg ">
-
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="titleNav navbar-brand" href="index.html">E-Commerce</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#">E-Commerce</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <div class="me-2 linksNav collapse navbar-collapse m-auto" id="navbarNav">
-                    <ul class="me-5 navbar-nav">
+                <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="links nav-link" aria-current="page" href="#mainSection">Home</a>
+                            <a class="nav-link" aria-current="page" href="#mainSection">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="links nav-link" href="#contactSection">Contact</a>
+                            <a class="nav-link" href="#contactSection">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="links nav-link" href="#produSection">Products</a>
+                            <a class="nav-link" href="#produSection">Productos</a>
                         </li>
                     </ul>
-                </div>
-
-                <div class="container mx-auto">
-                    <button class="btn btn-secundary"><a class="cart" href="#carrito">Mi Carrito</a></button>
+                    <form class="d-flex">
+                        <button class="btn btn-outline-primary" type="submit">Carrito</button>
+                    </form>
                 </div>
             </div>
         </nav>
@@ -120,8 +118,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Paco Rabanne</h5>
                         <p class="card-text"> Black XS - $1.500,00</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal"
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
                             data-id="1">Agregar</a>
                     </div>
                 </div>
@@ -133,8 +130,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Paco Rabanne</h5>
                         <p class="card-text">One Millon Lucky - $2.000,00</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal"
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
                             data-id="2">Agregar</a>
                     </div>
                 </div>
@@ -145,8 +141,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Paco Rabanne</h5>
                         <p class="card-text">One Millon - $1.800,00</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal"
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
                             data-id="3">Agregar</a>
                     </div>
                 </div>
@@ -157,18 +152,21 @@
                     <div class="card-body">
                         <h5 class="card-title">Paco Rabanne</h5>
                         <p class="card-text">Invictus - $2.500,00</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal"
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
                             data-id="4">Agregar</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- CARRITO -->
 
-    <div id="carrito"></div>
+    <div class="container" id="carrito">
+        <div class="row d-flex justify-content-center">
+            <h2>Carrito de Compras</h2>
+        </div>
+    </div>
 
 
     <!-- MODAL -->

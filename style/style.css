@@ -12,9 +12,6 @@ body {
 
 header {
     background-color: beige;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
 }
 
 .titleNav {
@@ -24,8 +21,6 @@ header {
 }
 
 .linksNav {
-    display: flex;
-    justify-content: center;
     font-size: large;
     font-weight: bold;
 }
