@@ -17,22 +17,13 @@ header {
 .titleNav {
     font-size: 2rem;
     font-weight: bolder;
-    color: blue;
+    color: rebeccapurple;
 }
 
-.linksNav {
-    font-size: large;
-    font-weight: bold;
-}
-
-.links {
-    color: blue;
-    text-decoration: none;
-}
-
-.cart {
-    color: red;
-    text-decoration: none
+.titleMain {
+    font-size: 3rem;
+    font-weight: bolder;
+    color:rebeccapurple ;
 }
 
 h2 {

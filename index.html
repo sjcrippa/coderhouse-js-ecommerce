@@ -20,14 +20,21 @@
 
     <!-- SECTOR DE NAVEGACION -->
 
-    <header>
-        <nav class="navbar bg-body-tertiary">
+    <header id="header">
+        <nav class="navbar">
             <div class="container-fluid">
-                <a class="navbar-brand">Navbar</a>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                <a class="navbar-brand">
+                    <h1 class="titleNav">E-Commerce</h1>
+                </a>
+                <ul class="navbar-nav">
+                    <li class="titleNav nav-item">
+                        <a class="nav-link text-white" 
+                            data-bs-toggle="modal"
+                            data-bs-target="#modal">
+                            <i class="bi bi-cart mx-5" id="carritoContenedor">0</i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -36,13 +43,13 @@
 
     <main id="mainSection">
         <div class="container">
-            <h2 class="mt-2 text-center">Proyecto final CoderHouse</h2>
+            <h2 class="titleMain mt-2 text-center">Proyecto final CoderHouse</h2>
 
             <!-- IMAGEN VONA  -->
 
             <section>
                 <div class="container d-flex justify-content-center">
-                    <img class="mx-auto img-fluid" src="src/imgs/favicon/favicon-tres.png" alt="">
+                    <a href="#footer"><img class="mx-auto img-fluid" src="src/imgs/favicon/favicon-tres.png" alt="Logo Vona"></a>
                 </div>
             </section>
 
@@ -73,7 +80,6 @@
                     <label for="email" class="form-label">Direccion de Email</label>
                     <input type="email" placeholder="Escriba su correo electronico" class="form-control" id="email"
                         aria-describedby="emailHelp" required>
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
                     <!-- input textos -->
@@ -101,89 +107,31 @@
 
     <!-- SECTOR DE PRODUCTOS -->
 
-    <section id="produSection" class="mt-5 container-fluid">
-        <div class="mt-5">
+    <section class="mt-5 container">
+        <div>
             <h2 class="text-center">Eleji el aroma que mas te guste</h2>
             <h4 class="mt-5 text-center">Dentro de nuestra gama de productos podes encontrar:</h4>
-        </div>
 
-        <div class="mt-5 row row-cols-1 row-cols-md-2 g-4 text-center">
-            <div class="col d-flex justify-content-center">
-                <div class="card">
-                    <img src="src/imgs/cards-perfumes/black-xs.PNG" class="cartaImg card-img-top img-fluid" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Paco Rabanne</h5>
-                        <p class="card-text"> Black XS - $1.500,00</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                            data-id="1">Agregar</a>
-                    </div>
-                </div>
+            <div id="contenedor" class="mt-5 row justify-content-center gap-4">
+                <!-- ACA SE VAN A RENDERIZAR LOS PRODUCTOS -->
             </div>
-            <div class="col d-flex justify-content-center">
-                <div class="card">
-                    <img src="src/imgs/cards-perfumes/one-millon-lucky.PNG" class="cartaImg card-img-top img-fluid"
-                        alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Paco Rabanne</h5>
-                        <p class="card-text">One Millon Lucky - $2.000,00</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                            data-id="2">Agregar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="card">
-                    <img src="src/imgs/cards-perfumes/one-millon.PNG" class="cartaImg card-img-top img-fluid" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Paco Rabanne</h5>
-                        <p class="card-text">One Millon - $1.800,00</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                            data-id="3">Agregar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="card">
-                    <img src="src/imgs/cards-perfumes/invictus.PNG" class="cartaImg card-img-top img-fluid" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Paco Rabanne</h5>
-                        <p class="card-text">Invictus - $2.500,00</p>
-                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                            data-id="4">Agregar</a>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </section>
 
-    <!-- CARRITO -->
+    <!-- IMAGEN VONA -->
 
-
-
-    <!-- MODAL -->
-
-    <div class="modal fade just" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito de compras.</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ¡Has agregado un producto al carrito!
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Entendido</button>
-                </div>
-            </div>
+    <section class="mt-5">
+        <div class="container d-flex justify-content-center">
+            <a href="#header"><img class="mx-auto img-fluid" src="src/imgs/favicon/favicon-tres.png" alt="Logo Vona"></a>
         </div>
-    </div>
+    </section>
 
     <!-- FOOTER -->
 
     <div class="b-example-divider"></div>
 
-    <div class="container mt-5">
+    <div id="footer" class="container mt-5">
         <footer class="d-flex flex-wrap justify-content-center py-3 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
                 <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
@@ -203,7 +151,7 @@
 
     <!-- SweetAlert2 -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
+
     <!-- Scripts -->
     <script src="script/index.js"></script>
 

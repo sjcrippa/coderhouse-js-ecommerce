@@ -1,3 +1,80 @@
+// Arrays productos
+const stockProductos = [
+    {
+        id: 1,
+        nombre: "Armani Aqua",
+        cantidad: 1,
+        precio: 25200,
+        img: "../src/imgs/cards-perfumes/armani-aqua.png",
+        descripcion: "Eau De Parfum"
+    },
+    {
+        id: 2,
+        nombre: "Armani Code",
+        cantidad: 1,
+        precio: 27650,
+        img: "../src/imgs/cards-perfumes/armani-code.png",
+        descripcion: "Eau De Parfum"
+    },
+    {
+        id: 3,
+        nombre: "Armani Gio",
+        cantidad: 1,
+        precio: 26900,
+        img: "../src/imgs/cards-perfumes/armani-gio.png",
+        descripcion: "Eau De Parfum"
+    },
+    {
+        id: 4,
+        nombre: "Armani Profumo",
+        cantidad: 1,
+        precio: 32970,
+        img: "../src/imgs/cards-perfumes/armani-profumo.png",
+        descripcion: "Eau De Parfum"
+    },
+    {
+        id: 5,
+        nombre: "Black XS",
+        cantidad: 1,
+        precio: 31550,
+        img: "../src/imgs/cards-perfumes/black-xs.png",
+        descripcion: "Eau De Parfum"
+    },
+    {
+        id: 6,
+        nombre: "Invictus",
+        cantidad: 1,
+        precio: 37850,
+        img: "../src/imgs/cards-perfumes/invictus.png",
+        descripcion: "Eau De Parfum"
+    },
+    {
+        id: 7,
+        nombre: "One Millon",
+        cantidad: 1,
+        precio: 38900,
+        img: "../src/imgs/cards-perfumes/one-millon.png",
+        descripcion: "Eau De Parfum"
+    },
+    {
+        id: 8,
+        nombre: "One Millon Lucky",
+        cantidad: 1,
+        precio: 39950,
+        img: "../src/imgs/cards-perfumes/one-millon-lucky.png",
+        descripcion: "Eau De Parfum"
+    },
+    {
+        id: 9,
+        nombre: "My Way",
+        cantidad: 1,
+        precio: 28750,
+        img: "../src/imgs/cards-perfumes/my-way.png",
+        descripcion: "Eau De Parfum"
+    },
+
+];
+
 // Variables con elementos del formulario
 
 let nombreForm = document.querySelector('#name');
@@ -7,9 +84,9 @@ let formulario = document.querySelector('#formulario');
 let info = document.querySelector('.info');
 let articulosCarrito = [];
 
-// Eventos
+// Evento de respuesta a formulario
 
-const mostrarInfo = formulario.addEventListener('submit', function(e){
+const mostrarInfo = formulario.addEventListener('submit', function (e) {
     e.preventDefault();
 
     info.innerHTML = `
@@ -19,86 +96,28 @@ const mostrarInfo = formulario.addEventListener('submit', function(e){
     `
 });
 
-// Productos
+const contenedor = document.querySelector("#contenedor")
 
-const cards = document.querySelectorAll('.card')
-cards.forEach((card) => {
-    card.addEventListener('click', (e) => {
-        leerProductos(e.target.parentElement)
-    });
-});
-
-function leerProductos(producto){
-    const infoProducto = {
-        titulo: producto.querySelector('.card-title').textContent,
-        texto: producto.querySelector('.card-text').textContent,
-        id: producto.querySelector('.btn').getAttribute('data-id'),
-    };
-    
-    // Agregar al Carrito
-
-    articulosCarrito = [...articulosCarrito, infoProducto];
-
-    carritoHTML();
-};
-
-const carrito = document.querySelector('#carrito');
-
-function carritoHTML() {
-    limpiarHTML();
-
-    articulosCarrito.forEach((producto) =>{
-        const row = document.createElement('p')
-        row.innerHTML = `
-        <div class = "mt-5 container">
-        
-        <h5>${producto.titulo}</h5>
-        <p>${producto.texto}<p>
-
-        <button class = "btn btn-danger" id = "${producto.id}">Eliminar</button>
-
+stockProductos.forEach((prod) => {
+    const { id, nombre, cantidad, precio, img, descripcion } = prod
+    contenedor.innerHTML +=
+    `
+    <div class="card mt-3" style="width: 18rem;">
+        <img class="cartaImg card-img-top mt-2" src="${img}" alt="Producto">
+        <div class="card-body">
+            <h5 class="card-title">${nombre}</h5>
+            <p class="card-text">Precio: ${precio}</p>
+            <p class="card-text">Descripcion: ${descripcion}</p>
+            <p class="card-text">Cantidad: ${cantidad}</p>
+            <button class="btn btn-primary" 
+            onclick="agregarProducto(${id})">Agregar</button>
         </div>
+    </div>
+    `
+})
 
-        `;
-        carrito.appendChild(row)
-    });
-
-    function limpiarHTML() {
-        carrito.innerHTML = '';
-    }
+function agregarProducto(id){
+    const articulos = stockProductos.find((prod) => prod.id === id)
+    articulosCarrito.push(articulos)
+    console.log(articulosCarrito)
 }
-
-// Eliminar producto
-
-carrito.addEventListener('click', eliminarProducto);
-
-function eliminarProducto(e){
-    if(e.target.classList.contains('btn-danger')){
-        let productoID = e.target.getAttribute('id')
-        articulosCarrito = articulosCarrito.filter(
-            (producto) => producto.id !== productoID
-        );
-
-        carritoHTML();
-    }
-};
-
-// Guardar Datos
-
-function guardarDatos(storage){
-    let name = document.getElementById('name').value;
-    let user = document.getElementById('email').value;
-    let text = document.getElementById('text').value;
-    
-    const usuario = {
-        'name': name,
-        'user': user,
-        'text': text
-    }
-
-    storage.setItem('users', JSON.stringify(usuario))
-};
-
-function borrarDatos(storage){
-    storage.clear()
-};
