@@ -21,30 +21,13 @@
     <!-- SECTOR DE NAVEGACION -->
 
     <header>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">E-Commerce</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#mainSection">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contactSection">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#produSection">Productos</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-outline-primary" type="submit">Carrito</button>
-                    </form>
-                </div>
+                <a class="navbar-brand">Navbar</a>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
         </nav>
     </header>
@@ -54,6 +37,15 @@
     <main id="mainSection">
         <div class="container">
             <h2 class="mt-2 text-center">Proyecto final CoderHouse</h2>
+
+            <!-- IMAGEN VONA  -->
+
+            <section>
+                <div class="container d-flex justify-content-center">
+                    <img class="mx-auto img-fluid" src="src/imgs/favicon/favicon-tres.png" alt="">
+                </div>
+            </section>
+
             <h3 class="mt-4 text-center">Vona</h3>
             <h4 class="text-center">Aromas Importados</h4>
             <div class="mt-4 text-center">
@@ -63,14 +55,6 @@
             </div>
         </div>
     </main>
-
-    <!-- IMAGEN VONA  -->
-
-    <section>
-        <div class="container d-flex justify-content-center">
-            <img class="mx-auto img-fluid" src="src/imgs/favicon/favicon-tres.png" alt="">
-        </div>
-    </section>
 
     <!-- SECTOR FORMULARIO -->
 
@@ -200,7 +184,7 @@
     <div class="b-example-divider"></div>
 
     <div class="container mt-5">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <footer class="d-flex flex-wrap justify-content-center py-3 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
                 <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
                     <svg class="bi" width="30" height="24">
@@ -217,7 +201,10 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 
-    <!-- Script -->
+    <!-- SweetAlert2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- Scripts -->
     <script src="script/index.js"></script>
 
 </body>
