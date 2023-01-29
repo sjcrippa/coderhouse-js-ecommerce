@@ -19,18 +19,26 @@ body {
 .titleNav {
     font-size: 2rem;
     font-weight: bolder;
+}
+
+.titleNav:hover {
     color: rebeccapurple;
+    cursor: default;
 }
 
 .titleMain {
     font-size: 3rem;
     font-weight: bolder;
+}
+
+.titleMain:hover {
     color: rebeccapurple;
+    cursor: default;
 }
 
 .btnCarrito {
-    background-color: rebeccapurple;
-    border-color: beige;
+    width: 70px;
+    height: 70px;
 }
 
 .btnCarrito:hover {
@@ -55,8 +63,23 @@ h4 {
     font-weight: bold;
 }
 
+/* ESTILOS A LAS CARDS */
+
 .card {
     width: 50%;
+}
+
+.cardTitle{
+
+    cursor: default;
+    font-size: larger;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.cardTitle:hover {
+    color: #d6ae7b;
+    text-decoration: underline;
 }
 
 .cartaImg {
@@ -76,8 +99,6 @@ h4 {
     aspect-ratio: 3/2;
     object-fit: contain;
     width: 200px;
-    padding: 20px;
-
 }
 
 .modal-content {

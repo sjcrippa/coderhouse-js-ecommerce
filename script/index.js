@@ -114,15 +114,17 @@ stockProductos.forEach((prod) => {
     const { id, nombre, cantidad, precio, imagen, descripcion } = prod
     contenedor.innerHTML +=
         `
-    <div class="card mt-3" style="width: 18rem;">
+    <div class="card mt-3 shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
         <img class="cartaImg card-img-top mt-2" src="${imagen}" alt="Producto">
         <div class="card-body">
-            <h5 class="card-title">${nombre}</h5>
-            <p class="card-text">Precio: ${precio}</p>
-            <p class="card-text">Descripcion: ${descripcion}</p>
-            <p class="card-text">Cantidad: ${cantidad}</p>
-            <button class="btn btn-primary" 
-            onclick="agregarProducto(${id})">Agregar</button>
+            <h5 class="card-title cardTitle">${nombre}</h5>
+            <div class="mt-3 text-center">
+                <p class="card-text">Descripcion: ${descripcion}</p>
+                <p class="card-text">$${precio}</p>
+                <p class="card-text">Cantidad: ${cantidad}</p>
+                <button class="btn btn-primary" 
+                    onclick="agregarProducto(${id})">Agregar</button>
+            </div>
         </div>
     </div>
     `
