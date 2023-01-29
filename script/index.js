@@ -96,7 +96,19 @@ const mostrarInfo = formulario.addEventListener('submit', function (e) {
     `
 });
 
-const contenedor = document.querySelector("#contenedor")
+/* CARGA DEL DOCUMENTO */
+
+const contenedor = document.querySelector("#contenedor");
+
+const cartConteiner = document.querySelector("#cartConteiner");
+
+const procesarCompra = document.querySelector("#procesarCompra")
+/* EVENTO DE RELOAD STORAGE */
+
+document.addEventListener("DOMContentLoaded", () => {
+    carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    mostrarCarrito();
+});
 
 stockProductos.forEach((prod) => {
     const { id, nombre, cantidad, precio, imagen, descripcion } = prod
@@ -116,8 +128,27 @@ stockProductos.forEach((prod) => {
     `
 });
 
+procesarCompra.addEventListener("click", () => {
+    if(carrito.length === 0){
+        Swal.fire({
+            title: "Tu carrito esta vacio",
+            text: "Compra algo para continuar",
+            icon: "error",
+            confirmButtonText: "Aceptar",
+        })
+    }
+})
+
+/* FUNCIONES PARA EL CARRITO */
+
 const agregarProducto = (id) => {
     const existe = carrito.some(prod => prod.id === id)
+
+    Swal.fire({
+        title: "Felicitaciones!!",
+        text: "Has agregado un producto al carrito",
+        confirmButtonText: "Aceptar",
+    })
 
     if (existe) {
         const prod = carrito.map(prod => {
@@ -133,6 +164,7 @@ const agregarProducto = (id) => {
 
 };
 
+
 const mostrarCarrito = () => {
     const modalBody = document.querySelector(".modal .modal-body");
     if (modalBody) {
@@ -142,19 +174,42 @@ const mostrarCarrito = () => {
             console.log(modalBody);
             modalBody.innerHTML += `
         <div class="modal-contenedor">
-          <div>
-          <img class="img-fluid img-carrito" src="${imagen}"/>
-          </div>
-          <div class="mt-3">
-          <p>Producto: ${nombre}</p>
+        <div>
+        <img class="img-fluid img-carrito" src="${imagen}"/>
+        </div>
+        <div class="mt-3">
+        <p>Producto: ${nombre}</p>
         <p>Precio: ${precio}</p>
         <p>Cantidad :${cantidad}</p>
         <button class="btn btn-danger"  onclick="eliminarProducto(${id})">Eliminar producto</button>
-          </div>
+        </div>
         </div>
         
     
-        `;
+        `
         });
+
+        if (carrito.length === 0) {
+            modalBody.innerHTML =
+                `
+            <p class="text-center parrafo"> El carrito esta vacio </p>
+        `
+        }
     }
+
+    cartConteiner.textContent = carrito.length
+
+    guardarStorage()
+}
+
+function eliminarProducto(id) {
+    const perfumesId = id
+    carrito = carrito.filter((perfume) => perfume.id !== perfumesId)
+    mostrarCarrito();
+};
+
+/* FUNCION GUARDADO EN STORAGE */
+
+function guardarStorage() {
+    localStorage.setItem("carrito", JSON.stringify(carrito))
 }
