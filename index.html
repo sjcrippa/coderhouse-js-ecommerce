@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,15 +27,12 @@
                 <a class="navbar-brand">
                     <h1 class="titleNav">E-Commerce</h1>
                 </a>
-                <ul class="navbar-nav">
-                    <li class="titleNav nav-item">
-                        <a class="nav-link text-white" 
-                            data-bs-toggle="modal"
-                            data-bs-target="#modal">
-                            <i class="bi bi-cart mx-5" id="carritoContenedor">0</i>
-                        </a>
-                    </li>
-                </ul>
+                <form class="d-flex">
+                    <button class="btnCarrito btn btn-primary" type="submit">
+                        <a id="carritoContenedor" class="nav-link" data-bs-toggle="modal"
+                            data-bs-target="#modal">Carrito</a>
+                    </button>
+                </form>
             </div>
         </nav>
     </header>
@@ -49,7 +47,8 @@
 
             <section>
                 <div class="container d-flex justify-content-center">
-                    <a href="#footer"><img class="mx-auto img-fluid" src="src/imgs/favicon/favicon-tres.png" alt="Logo Vona"></a>
+                    <a href="#footer"><img class="mx-auto img-fluid" src="src/imgs/favicon/favicon-tres.png"
+                            alt="Logo Vona"></a>
                 </div>
             </section>
 
@@ -62,6 +61,37 @@
             </div>
         </div>
     </main>
+
+    <!-- MODAL -->
+
+    <div class="container-xl">
+        <div class="modal" tabindex="-1" role="dialog" id="modal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Carrito de compras</h5>
+                    </div>
+                    <div class="modal-body">
+                        <!-- ACA SE VA A RENDERIZAR LA COMPRA -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" id="vaciarCarrito">
+                            Vaciar
+                        </button>
+                        <button type="button" id="procesarCompra" class="btn btn-primary">
+                            Continuar compra
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Cerrar
+                        </button>
+
+                        <span>Total:</span>
+                        <p class="text-center" id="precioTotal"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- SECTOR FORMULARIO -->
 
@@ -115,7 +145,7 @@
             <div id="contenedor" class="mt-5 row justify-content-center gap-4">
                 <!-- ACA SE VAN A RENDERIZAR LOS PRODUCTOS -->
             </div>
-            
+
         </div>
     </section>
 
@@ -123,7 +153,8 @@
 
     <section class="mt-5">
         <div class="container d-flex justify-content-center">
-            <a href="#header"><img class="mx-auto img-fluid" src="src/imgs/favicon/favicon-tres.png" alt="Logo Vona"></a>
+            <a href="#header"><img class="mx-auto img-fluid" src="src/imgs/favicon/favicon-tres.png"
+                    alt="Logo Vona"></a>
         </div>
     </section>
 
@@ -154,6 +185,7 @@
 
     <!-- Scripts -->
     <script src="script/index.js"></script>
+    <script src=""></script>
 
 </body>
 

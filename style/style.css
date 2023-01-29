@@ -26,6 +26,18 @@ header {
     color:rebeccapurple ;
 }
 
+.btnCarrito {
+    background-color: rebeccapurple;
+    border-color: beige;
+}
+
+.btnCarrito:hover{
+    background-color: beige;
+    color: rebeccapurple;
+    border-color: rebeccapurple;
+    font-weight: bold;
+}
+
 h2 {
     font-size: 3rem;
     font-weight: bold;
@@ -48,4 +60,24 @@ h4 {
 .cartaImg {
     aspect-ratio: 3/2;
     object-fit: contain;
+}
+
+/* ESTILOS AL MODAL */
+
+.modal-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.img-carrito {
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    width: 200px;
+    padding: 20px;
+
+}
+
+.modal-content{
+    background-color: beige;
 }
